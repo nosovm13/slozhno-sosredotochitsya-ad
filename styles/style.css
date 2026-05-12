@@ -284,29 +284,21 @@
 }
 
 @media (width >= 1024px) {
+  .header,
+  .footer {
+    min-block-size: 768px;
+  }
+
   .header__theme-menu {
-    justify-self: center;
     align-self: start;
+    justify-self: center;
   }
 
   .header__theme-menu-list {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    grid-auto-flow: column;
   }
 
-  .content-section_type_cards {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .content-section_type_cards .content-section__title {
-    max-inline-size: calc((100% - 40px) / 3);
-  }
-
-  .content-section_type_cards .cards-list {
-    display: grid;
+  .cards-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
   }
 }
